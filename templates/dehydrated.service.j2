@@ -4,7 +4,7 @@ Description=Refresh letsencrypt certificates
 
 [Service]
 Type=oneshot
-WorkingDirectory=/opt/le-dns
-ExecStart=/opt/le-dns/dehydrated -f config -c
+WorkingDirectory=/var/lib/dehydrated
+ExecStart=/usr/bin/dehydrated -f /etc/dehydrated/config -c
 User=root
 Group=root

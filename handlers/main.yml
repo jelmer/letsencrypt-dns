@@ -2,7 +2,7 @@
   - name: reload
     become: True
     service:
-      name: le-dns.timer
+      name: dehydrated.timer
       state: restarted
       enabled: yes
       daemon_reload: yes
@@ -10,6 +10,6 @@
   - name: restart timer
     become: True
     service:
-      name: le-dns.timer
+      name: dehydrated.timer
       state: restarted
       enabled: yes

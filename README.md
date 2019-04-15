@@ -2,7 +2,7 @@
 Use `nsupdate` with GSSAPI and machine keytabs and [dehydrated](https://github.com/lukas2511/dehydrated) to automatically obtain (wildcard) certificates.
 
 ## Assumptions
-This role assumes that each host has a principal `host/fqdn@REALM` in `/etc/krb5.keytab`. It also assumes that each host is allowed to set TXT Records at `_acme-challenge.<domain>`. After applying the role to a new machine, you'll need to manually accept the ToS and run `/opt/le-dns/dehydrated --register --accept-terms`.
+This role assumes that each host has a principal `host/fqdn@REALM` in `/etc/krb5.keytab`. It also assumes that each host is allowed to set TXT Records at `_acme-challenge.<domain>`. After applying the role to a new machine, you'll need to manually accept the ToS and run `dehydrated --register --accept-terms`.
 
 ## Configuration
 | Variable | Default value | Description |
