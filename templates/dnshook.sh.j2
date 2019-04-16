@@ -25,6 +25,7 @@ DNSSERVER="{{ ledns_servers|random }}"
 TTL=60
 
 function deployCert() {
+    true
 {% for domain in ledns_cert_targets %}
         if [ "${2}" = "{{ domain }}" ] ; then
             echo "Detected {{ domain }}, installing cert..."
